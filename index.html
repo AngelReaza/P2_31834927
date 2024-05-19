@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Estilos.css">
+    <link rel="stylesheet" href="style.css">
     <title>Currículum Vitae</title>
     <style>
       body {
     font-family: Arial, sans-serif;
-    background-color: #248bbb;
+    background-color: #B4BEDF;
     margin: 0;
     padding: 20px;
 }
@@ -23,6 +23,12 @@
 h1, h2 {
     color: #333;
 }
+h3 {
+  font-size: 25px;
+  text-align: center;
+  color: #000000
+  
+}
 
 img{
 
@@ -33,6 +39,71 @@ margin: 0 35%;
 
 }
 
+input , textarea {
+  text-align: left;
+    padding: 17px 14px;
+    background-color: #333646;
+    border: 2;
+    font-size: 19px;
+    margin-bottom: 15px;
+    border-radius: 15px;
+    color: #f4f6f9
+
+    }
+
+  :focus{
+    outline: 1px solid #f4f6f9;
+
+
+  }
+  
+  form{
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    width: 50%; 
+    font-size: 20px;
+    margin-bottom: 25px;
+    color: #e0dfdf;
+    background-color: #333646;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 0 auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    
+  }
+
+  label{
+    font-size: 17px;
+    color: #e0dfdf;
+    margin-bottom: 25px;
+  }
+
+  .btn{
+    background-color: #1c5ae0;
+    text-align: center;
+    width: 150px;
+    align-self: flex-end;
+    cursor: pointer;
+    margin: 0 auto;
+
+  }
+  .btn:hover{
+    background-color: #4175e4 ;
+  }
+  @media(max-width:991px){
+    body {
+        padding: 30px;
+    }
+
+    .form-content{
+      width: 100%;
+    }
+
+    form{
+      width: 100%;
+    }
+  }
 p { 
   text-align:left;
 }
@@ -96,5 +167,29 @@ p {
           <li>Responsable</li>
         </ul>
     </div>
+    
+    <article>
+      <div class="form-content">
+      <h3>Formulario</h3>
+       
+
+      <form action="/contactos" id="contactos" method="post">
+
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="name" name="name" placeholder="Ingresa tu nombre">
+
+          <label for="email">Correo Electrónico:</label>
+          <input type="email" id="email" name="email" placeholder="Ingresa tu correo electrónico">
+
+          <label for="mensaje">Comentanos:</label>
+          <input type="text" id="coments"cols="30" rows="5" name="coments" placeholder="Ingresa tus comentarios">
+
+
+          <input class="btn" type="submit" value="enviar">
+
+      </form>
+
+        
+    </article>
 </body>
 </html>
